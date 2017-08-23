@@ -110,7 +110,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="noticefication"/>
                                 <connections>
-                                    <action selector="noticefication:" destination="NMv-PV-UW8" eventType="touchUpInside" id="nup-Pf-ORa"/>
+                                    <action selector="notification:" destination="NMv-PV-UW8" eventType="touchUpInside" id="zpk-vz-Bdh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1l-ZI-vq0">

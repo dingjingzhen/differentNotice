@@ -26,7 +26,7 @@
 
 }
 
-- (IBAction)noticefication:(UIButton *)sender {
+- (IBAction)notification:(UIButton *)sender {
 
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ChangeMessageNotification" object:self userInfo:@{@"message":self.textField.text}];
         [self dismissViewControllerAnimated:YES completion:nil];
