@@ -33,14 +33,14 @@
     SecondViewController *secondVC = [storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"];
     secondVC.delegate = self;
     [self presentViewController:secondVC animated:YES completion:nil];
-
+    
 }
 
 - (IBAction)notification:(UIButton *)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     SecondViewController *secondVC = [storyboard instantiateViewControllerWithIdentifier:@"SecondViewController"];
     [self presentViewController:secondVC animated:YES completion:nil];
-
+    
 }
 - (IBAction)block:(UIButton *)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -49,7 +49,7 @@
     secondVC.block = ^(NSString *str){
         self.myLabel.text = str;
     };
-
+    
 }
 - (IBAction)KVO:(UIButton *)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -73,7 +73,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     //清理观察
     [self.second removeObserver:self forKeyPath:@"userName"];
-
+    
 }
 
 

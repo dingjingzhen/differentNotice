@@ -23,24 +23,20 @@
 - (IBAction)popTofirst:(UIButton *)sender {
     [self.delegate transMessage:self.textField.text];
     [self dismissViewControllerAnimated:YES completion:nil];
-
 }
 
 - (IBAction)notification:(UIButton *)sender {
-
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ChangeMessageNotification" object:self userInfo:@{@"message":self.textField.text}];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ChangeMessageNotification" object:self userInfo:@{@"message":self.textField.text}];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)block:(UIButton *)sender {
-
     if (self.block) {
         self.block(self.textField.text);
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
+
 - (IBAction)KVO:(UIButton *)sender {
     self.message = self.textField.text;
     [self dismissViewControllerAnimated:YES completion:nil];
